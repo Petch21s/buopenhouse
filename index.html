@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BU Openhouse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css"> 
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom bg-black">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="images/bulogo.png" alt="Logo" style="height: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ms-3 text-white">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="workshop.html">Workshop</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+
+<section class="hero-section position-relative">
+  <div class="container-fluid p-0">
+    <img id="backgroundImage" src="images/bupic2.png" alt="Hero Image" ">
+    <div class="overlay position-absolute w-100 h-100"></div>
+    <img src="images/dotted222.png" alt="Dotted Pattern" class="dotted-pattern position-absolute w-100 h-100">
+
+    <div class="text-overlay position-absolute w-100 text-center" style="top: 30%; transform: translateY(-50%);">
+      <div id="imageText" class="text-white display-1 fw-bold text-start spacei" style="margin-left: 300px;">
+        <ul class="list-unstyled">
+          <li class="text-size-medium font-roboto">BU</li>
+          <li class="text-size-medium font-inter">Openhouse</li>
+          <li class="text-size-small font-inter">Start now</li>
+        </ul>
+      </div>
+
+      <div class="d-flex justify-content-between" style="width: 100%; padding: 0 80px; position: absolute; bottom: 100px;">
+        <button class="btn btn-warning" style="width: 80px; height: 80px; border-radius: 0;" id="leftButton">
+          <i class="fa fa-arrow-left  " style="font-size: 25px;" aria-hidden="true"></i>
+        </button>
+        
+        
+        <div class="dots-container">
+          <span class="dot" id="dot1"></span>
+          <span class="dot" id="dot2"></span>
+          <span class="dot" id="dot3"></span>
+        </div>
+
+        <button class="btn btn-warning" style="width: 80px; height: 80px; border-radius: 0;" id="rightButton">
+          <i class="fas fa-arrow-right  " style="font-size: 25px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="button-container">
+  <a href="workshop.html" style="text-decoration: none;">
+    <button class="btn btn-dark overlay-button left-button" 
+        style="background-image: url('images/workshop.png'); transition: background-color 0.3s; border: none; padding: 10px 20px;">
+        <i class="fas fa-flask text-size-medium" style="color: white;"></i>
+        <span class="button-text" style="font-weight: bold; color: white;">Workshop</span>
+    </button>
+  </a>
+
+  <a href="about.html" style="text-decoration: none;">
+
+    <button class="btn btn-dark overlay-button"
+          style="background-color: white;"
+          onmouseover="this.querySelector('.button-text').style.color='#FFBD14'; this.querySelector('.fa-user').style.color='#FFBD14';"
+          onmouseout="this.querySelector('.button-text').style.color='black'; this.querySelector('.fa-user').style.color='black';">
+
+    <i class="fa fa-user text-size-medium"></i>
+    <span class="button-text" style="font-weight: bold;">About</span>
+    </button>
+
+
+  </a>
+  
+  <a href="faq.html" style="text-decoration: none;"">
+    <button class="btn btn-dark overlay-button"
+          style="background-color: white;"
+          onmouseover="this.querySelector('.button-text').style.color='#FFBD14'; this.querySelector('.fa-comment').style.color='#FFBD14';"
+          onmouseout="this.querySelector('.button-text').style.color='black'; this.querySelector('.fa-comment').style.color='black';">
+    <i class="fa fa-comment  text-size-medium"></i>
+    <span class="button-text" style="font-weight: bold;">FAQ</span>
+
+  </button>
+  </a>
+  
+</div>
+
+
+<section class="py-5 section-bg" style="background-color: #E6E6E6 ; height: 500px;">
+  <div class="container">
+    
+  </div>
+</section>
+
+
+<section class="py-5 section-bg" style="background-color: #030e2e; height: 500px; display: flex; justify-content: center; align-items: center; position: relative;">
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3" 
+       id="image-container"
+       style="width: 1000px;  height: 500px; position: relative; overflow: hidden; top: -180px;">
+    
+    <!-- รูปภาพทั้งหมด -->
+    <div class="image-slide" style="background-image: url('images/highlight/1.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 1;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/2.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/3.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/4.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/5.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/6.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/7.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/8.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/9.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/10.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/11.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+    <div class="image-slide" style="background-image: url('images/highlight/12.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0;"></div>
+  </div>
+
+  <!-- ปุ่มลูกศรเลื่อน -->
+<button id="prev" class="arrow-btn" style="position: absolute; left: 300px; top: 70px; transform: translateY(-50%); z-index: 10; background: rgba(0, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.3s, transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+    <i class="fa fa-arrow-left" aria-hidden="true" style="font-size: 20px;"></i>
+</button>
+
+<button id="next" class="arrow-btn" style="position: absolute; right: 300px; top: 70px; transform: translateY(-50%); z-index: 10; background: rgba(0, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.3s, transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+    <i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;"></i>
+</button>
+
+
+
+
+<!-- ปุ่ม Dot Navigation -->
+<div id="dot-navigation" style="position: absolute; bottom: 20px; display: flex; justify-content: center; width: 100%;">
+  <!-- Dot จะถูกสร้างขึ้นโดย JavaScript -->
+</div>
+
+
+
+</section>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/slide.js"></script>
+
+</body>
+</html>

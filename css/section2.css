@@ -1,0 +1,9 @@
+.overlay-box {
+    background-color: black;
+    width: 100%; /* ปรับขนาดให้เต็มความกว้าง */
+    height: 200px; /* ความสูงของกล่อง */
+    top: 60%; /* ปรับตำแหน่งให้ทับอยู่ระหว่าง section */
+    left: 0;
+    z-index: 1; /* ให้แน่ใจว่ากล่องนี้อยู่เหนือ section 1 แต่ด้านล่าง section 2 */
+  }
+  

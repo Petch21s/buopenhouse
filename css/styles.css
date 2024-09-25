@@ -1,0 +1,355 @@
+.navbar-custom {
+    background-color: black;
+    
+}
+  
+.navbar-nav .nav-link:hover {
+  color: #f1c40f !important; /* เปลี่ยนสีเป็นสีส้มเมื่อ hover */
+}
+
+
+.navbar-toggler {
+  border-color: white; /* เปลี่ยนสีกรอบของ hamburger */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 0, 99, 0.9); /* สีฟ้า (คุณสามารถปรับได้ตามต้องการ) */
+    mix-blend-mode: multiply;
+    z-index: 2; 
+}
+
+.text-overlay {
+  
+    position: relative;
+    z-index: 3; 
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dotted-pattern {
+  top: 0; 
+  left: 0; 
+  z-index: 3; 
+  mix-blend-mode: multiply; 
+  opacity: 0.1; 
+}
+
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.text-size-large {
+  font-size: 200px;
+}
+
+.text-size-medium {
+  font-size: 100px;
+}
+
+
+@font-face {
+  font-family: 'Lineseedsan';
+  src: url('font/LINESeedSansTH_W_Bd.woff2') format('woff2'), /* ตัวอย่างไฟล์ */
+       url('font/LINESeedSansTH_W_Bd.woff') format('woff'); /* ตัวอย่างไฟล์ */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+.spacei ul li {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+.spacei ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.spacei ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.spacei ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+
+.dots-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: -300px; /* ปรับตำแหน่งให้เลื่อนลงมาตามที่ต้องการ */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #f1c40f; /* สีเมื่อแอคทีฟ */
+}
+
+.overlay-box {
+  background-color: black;
+  width: 389px; /* ขนาดของกล่อง */
+  height: 352px; /* ความสูงของกล่อง */
+  position: absolute; /* ให้ตำแหน่งของกล่องอยู่เหนืออื่น ๆ */
+  z-index: 1; /* ให้แน่ใจว่ากล่องนี้อยู่เหนือ section 1 แต่ด้านล่าง section 2 */
+}
+
+#center-box {
+  top: 100%; /* กล่องกลาง */
+  left: 50%; /* ตำแหน่งกลาง */
+  transform: translateX(-50%);
+}
+
+.left-box {
+  top: 100%; /* กล่องซ้าย */
+  left: calc(50% - 450px); /* ปรับตำแหน่งซ้าย (450px = half of the total width + margin) */
+  transform: translateX(-50%);
+}
+
+.right-box {
+  top: 100%; /* กล่องขวา */
+  left: calc(50% + 450px); /* ตำแหน่งขวา (ปรับตามความกว้างของกล่อง) */
+  transform: translateX(-50%);
+}
+
+
+.button-container {
+  position: absolute; /* ให้ตำแหน่งของปุ่มอยู่เหนือ section 1 */
+  top: 100%; /* ปรับตำแหน่งให้อยู่ระหว่าง section */
+  width: 100%; /* ให้กว้างเต็มพื้นที่ */
+  display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่ม */
+  justify-content: space-between; /* จัดเรียงปุ่มให้ห่างกัน */
+  padding: 0 280px; /* เพิ่ม padding ซ้ายและขวา */
+  z-index: 2; /* ให้แน่ใจว่าปุ่มนี้อยู่เหนือ section 1 */
+}
+
+.overlay-button {
+  width: 389px; /* ขนาดของปุ่ม */
+  height: 352px; /* ความสูงของปุ่ม */
+  border-radius: 8px; /* เพิ่มความโค้งให้ปุ่ม */
+   /* ตั้งค่า background image */
+  background-size: cover; /* ให้ภาพขยายเต็มปุ่ม */
+  background-position: center; /* จัดตำแหน่งภาพที่กลางปุ่ม */
+  color: black; /* เปลี่ยนสีข้อความให้ขัดกับพื้นหลัง */
+  border: none; /* ลบกรอบของปุ่ม */
+  cursor: pointer; /* เปลี่ยนรูปแบบเคอร์เซอร์เมื่อวางเมาส์ */
+  position: relative; /* ทำให้ปุ่มสามารถใช้ z-index ได้ */
+  display: flex; /* ใช้ flex เพื่อจัดตำแหน่งข้อความภายในปุ่ม */
+  align-items: center; /* จัดแนวแนวตั้ง */
+  justify-content: center; /* จัดแนวแนวนอน */
+  text-align: center; /* จัดแนวข้อความ */
+
+  
+
+.icon {
+  font-size: 48px; /* ขนาดของไอคอน (ปรับได้ตามต้องการ) */
+}
+
+.button-text {
+  margin-top: 10px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  font-size: 18px; /* ขนาดฟอนต์ของข้อความ (ปรับได้ตามต้องการ) */
+}
+}
+
+
+
+.blue-overlay {
+  position: absolute; /* ทำให้กล่องสามารถซ้อนทับได้ */
+  top: 0; /* เริ่มจากด้านบน */
+  left: 0; /* เริ่มจากด้านซ้าย */
+  width: 99px; /* ขนาดให้ตรงกับปุ่มซ้าย */
+  height: 99px; /* ขนาดให้ตรงกับปุ่มซ้าย */
+  background-color: blue; /* สีพื้นหลัง */
+  mix-blend-mode: multiply; /* ใช้ blend mode */
+  opacity: 0.5; /* ความโปร่งแสงของกล่อง (ปรับได้ตามต้องการ) */
+  z-index: 3; /* ให้แน่ใจว่ากล่องอยู่เหนือปุ่ม */
+}
+
+
+.overlay-button {
+  position: relative; /* เพื่อให้สามารถใช้ z-index ได้ */
+  display: flex; /* ใช้ flexbox เพื่อจัดการแนวตั้ง */
+  flex-direction: column; /* ให้จัดเรียงแนวตั้ง */
+  align-items: center; /* จัดกึ่งกลางในแนวนอน */
+  justify-content: center; /* จัดกึ่งกลางในแนวตั้ง */
+  color: black; /* เปลี่ยนสีข้อความให้ขัดกับพื้นหลัง */
+  border: none; /* ลบกรอบของปุ่ม */
+  cursor: pointer; /* เปลี่ยนรูปแบบเคอร์เซอร์เมื่อวางเมาส์ */
+}
+
+.icon {
+  font-size: 48px; /* ขนาดของไอคอน (ปรับได้ตามต้องการ) */
+}
+
+.button-text {
+  margin-top: 10px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  font-size: 18px; /* ขนาดฟอนต์ของข้อความ (ปรับได้ตามต้องการ) */
+}
+
+.overlay-button:hover .button-text {
+  color: #ffcc00; /* เปลี่ยนสีฟอนต์เมื่อ hover */
+}
+
+.overlay-button:hover .fa {
+  color: #ffcc00; /* เปลี่ยนสีไอคอนเมื่อ hover */
+}
+
+
+.overlay-button:hover {
+  transform: scale(1.05); /* ขยายปุ่มเมื่อ hover */
+}
+
+
+
+.image-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* เปลี่ยนเป็น cover */
+  background-position: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-slide.active {
+  opacity: 1; /* แสดงเฉพาะรูปที่ active */
+}
+
+/* เพิ่ม CSS นี้เพื่อให้กล่องมีขอบ */
+.p-5 {
+  border-radius: 10px; /* ขอบมน */
+  overflow: hidden; /* ซ่อนส่วนที่เกิน */
+}
+
+
+#image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex; /* ใช้ flex เพื่อให้สามารถเลื่อนได้แบบ inline */
+  transition: transform 0.5s ease-in-out; /* ทำให้เลื่อนได้ smooth */
+}
+
+.image-slide {
+  min-width: 100%; /* ขนาดรูปให้เต็มจอ */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#prev {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: white; /* สีเริ่มต้น */
+  cursor: pointer;
+  display: inline-block;
+}
+
+.active-dot {
+  background-color: yellow; /* สีเมื่อถูกเลือก */
+}
+
+#dot-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.bold-text {
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+
+
+
+
+.card-body {
+  background-image: url('path/to/your/image.jpg'); /* เปลี่ยนเป็น URL ของภาพที่คุณต้องการใช้ */
+  background-size: cover; /* ทำให้ภาพเต็มพื้นที่ */
+  background-position: center; /* จัดตำแหน่งภาพตรงกลาง */
+  transition: transform 0.3s ease;
+}
+
+.card-body:hover {
+  transform: scale(1.02); /* ขยายการ์ดเมื่อ hover */
+}
+
+
